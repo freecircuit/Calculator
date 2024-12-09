@@ -1,0 +1,12 @@
+#calc{
+    display: flex;
+    text-align: center;
+    background-color: grey;
+    max-width: fit-content;
+
+}
+
+.but{
+    display: flex;
+    text-align: center;
+}
