@@ -18,6 +18,11 @@ body{
         min-width: 100%;
         padding-top: 25px;
         padding-bottom: 25px;
+        border: 1px ridge black;
+        box-shadow: 3px 1px black;
+        flex-wrap: wrap;
+        height: 100%;
+
     
 }
 
@@ -29,30 +34,38 @@ body{
     font-size: 75px;
     background-color: rgb(27, 27, 27);
     color: cadetblue;
-    min-width: 100%;
+    min-width: 95%;
+    max-width:200px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height:90px;
 }
 
 #calc{
     display: flex;
     text-align: center;
     background-color: grey;
+    justify-content: center;
     max-width: fit-content;
     flex-direction: column;
     margin: auto;
+    border: 15px solid black;
 
 }
 
 .but{
     display: flex;
     text-align: center;
+    border: 2px ridge cadetblue;
 }
 
 button{
     border-radius: 10%;
     color: aliceblue;
     background-color: black;
-    font-size: xx-large;
+    font-size: 60px;
     min-width: 90%;
+    border: 4px ridge black;
 }
 
 #ops{
