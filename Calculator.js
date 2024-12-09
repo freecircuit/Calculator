@@ -2,6 +2,7 @@
 var num1 = a
 var op = b
 var num2 = c
+const solution = operate(op, num1, num2)
 
 //The operate function:
 const operate = function (op, num1, num2) {
