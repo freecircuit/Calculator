@@ -5,12 +5,14 @@ const num = document.querySelectorAll('.num');
 const display = document.querySelector("#InnerDisplay");
 const equal = document.querySelector('#equal')
 const clear = document.querySelector('#clear')
+const decimal = document.querySelector('#decimal')
 let count = 1;
 let opp = {rator: null}
 let temp = {temp: null}
 let answer = 0;
 let string = '';
 let click = 0;
+let decimal_count = 0;
 
 //Retrieve values for variables
 document.querySelectorAll(".num").forEach(item => {
@@ -33,12 +35,17 @@ document.querySelectorAll(".num").forEach(item => {
 
     //populate variable to be added to values array
     string += e.target.innerHTML
+  })});
 
+  //Allow addition of decimal but not more than once per number
+  decimal.addEventListener('click', (e) => {
+    if(decimal_count == 0){
+      display.textContent += e.target.innerHTML;
+      string += e.target.innerHTML
+    }
+    decimal_count += 1;
 
-  }
-  )
-  
-});
+  })
 
   //Assign operator to a variable and use the click event as to begin next number    
   document.querySelectorAll('.op').forEach(item => {
@@ -74,6 +81,7 @@ document.querySelectorAll(".num").forEach(item => {
         display.textContent = Math.round(answer * 10000) / 10000;
         string = '0'
         click = 0
+        decimal_count = 0;
         console.log(values)
       })
     })
@@ -97,6 +105,7 @@ document.querySelectorAll(".num").forEach(item => {
       }
         string = '0'
         click = 0
+        decimal_count = 0;
         
     })
     //Add functionality to the clear button
@@ -108,6 +117,7 @@ document.querySelectorAll(".num").forEach(item => {
       string = '';
       click = 0;
       display.textContent = null
+      decimal_count = 0;
     })
 
 
@@ -169,7 +179,7 @@ const operate = function (op, num1, num2) {
   else if (op === '/'){
     const num = divide(num1, num2);
     if(num2 == 0){
-      echo("do not divide by zero!")
+      alert("do not divide by zero!")
       return 0;
     }
     else{
