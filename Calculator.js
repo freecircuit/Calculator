@@ -168,7 +168,12 @@ const operate = function (op, num1, num2) {
   }
   else if (op === '/'){
     const num = divide(num1, num2);
-    return num;
+    if(num2 == 0){
+      echo("do not divide by zero!")
+      return 0;
+    }
+    else{
+    return num;}
   }
   else if (op === '**'){
     const num = power(num1, num2);
