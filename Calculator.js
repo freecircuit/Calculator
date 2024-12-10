@@ -121,47 +121,6 @@ document.querySelectorAll(".num").forEach(item => {
     })
 
 
-
-  // op.addEventListener('click', (e) => {
-
-  //   //values & count = method of storing numbers entered into an array
-  //   if (display.innerHTML != NaN){
-  //     values[count] = parseFloat(display.innerHTML)}
-  //   console.log(values[count])
-
-  //   op = e.target
-  //   opp.rator = op.innerHTML
-  //   console.log(opp.rator)
-    
-  //  console.log(values);
-  //  count += 1;
-  //   if(count > 1){
-  //     let answer =  values.reduce((total, currentItem) => {
-  //     return operate(opp.rator, currentItem, total)
-  //   })
-  //   values[0] = answer;
-  //   display.textcontent = answer;
-  //     count = 1
-  //   }
-
-  //   display.textContent = null;
-  //   console.log(count)
-  
-
-  // })
-
-  
-  // equal.addEventListener('click', (e) => {
-  //   const answer = operate(opp.rator, values[1], values[0])
-
-  //     console.log(answer)
-
-  // })
-
-
- 
-
-
 //The operate function:
 const operate = function (op, num1, num2) {
   if (op === '+'){
